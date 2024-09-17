@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exhibitopia</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="main-nav">
@@ -37,7 +40,7 @@
         </div>
         <ul class="nav-links">
     
-            <li><a href="#location">Location</a></li>
+            <li><a href="#location">Home</a></li>
             <li><a href="payportal.html">Tickets</a></li>
             <li><a href="#membership">Membership</a></li>
             <li><a href="#category">Category</a></li>
@@ -45,10 +48,10 @@
         </ul>
     </nav>
     <div class="banner">
-        <img src="bannerbg.jpg" alt="Banner Background">
+        <img src="banner6.jpg" alt="Banner Background">
         <!-- Remove the banner-overlay div -->
         <div class="banner-text">
-            <span class="word">Discover </span>
+            <span class="word">Explore </span>
             <span class="word">Museums </span>
             <span class="word">Around</span>
             <span class="word">You!</span>
@@ -68,7 +71,7 @@
             <div class="card">
                 <img src="birlamuseum.jpg" alt="Birla Museum">
                 <div class="card__content">
-                    <p class="card__title">Birla Museum</p>
+                    <p class="card__title">Birla Industrial and Technological Museum</p>
                     <p class="card__description">One of the oldest Museums in India, largest in West Bengal</p>
                 </div>
             </div>
@@ -93,6 +96,27 @@
                     <p class="card__description">One of the oldest Museums in India, largest in West Bengal</p>
                 </div>
             </div>
+            <div class="card">
+              <img src="aliporemuseum.jpg" alt="Alipore Museum">
+              <div class="card__content">
+                  <p class="card__title">Alipore Museum</p>
+                  <p class="card__description">One of the oldest Museums in India, largest in West Bengal</p>
+              </div>
+          </div>
+          <div class="card">
+            <img src="sciencecity.png" alt="Science City ">
+            <div class="card__content">
+                <p class="card__title">Science City</p>
+                <p class="card__description">One of the oldest Museums in India, largest in West Bengal</p>
+            </div>
+        </div>
+        <div class="card">
+          <img src="planetarium.png" alt="MP Birla Planetarium">
+          <div class="card__content">
+              <p class="card__title">MP Birla Planetarium</p>
+              <p class="card__description">One of the oldest Museums in India, largest in West Bengal</p>
+          </div>
+      </div>
         </div>
     </main>
 
@@ -125,7 +149,18 @@
           </div>
       </div>
   </main>
-  
+
+  <main class="category-section">
+    <h2>Categories</h2>
+    <div class="card3-container">
+      <!-- /* From Uiverse.io by mayurd8862 */  -->
+      <div class="card3">HOVER</div>
+      <div class="card3">HOVER</div>
+      <div class="card3">HOVER</div>
+      <div class="card3">HOVER</div>
+    </div>
+  </main>    
+
       
       
     
@@ -260,5 +295,18 @@
       
     </footer>    
     <script src="script.js"></script>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '66e8c548ae54b3d14abae2f7' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production'
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
 </body>
 </html>
