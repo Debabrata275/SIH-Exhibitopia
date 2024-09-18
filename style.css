@@ -4,37 +4,50 @@ body {
   padding: 0;
 }
 
+/* Main navigation styles */
 .main-nav {
   background-color: #6b371d;
   padding: 20px 10px;
   position: relative;
-}
-
-.top-nav {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center align items */
-  margin-bottom: 15px;
-}
-
-.search-bar {
-  margin-bottom: 10px; /* Add space between search bar and auth buttons */
-  width: 100%; /* Make the search bar container full width */
-  max-width: 600px; /* Increase the maximum width of the search bar */
-  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+
+/* Flexbox layout for top navigation */
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* The search bar and auth buttons */
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.menu-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
 .search-bar input {
   padding: 8px;
-  width: calc(100% - 40px); /* Adjust width to account for the button */
+  width: calc(100% - 40px);
   border: none;
   border-radius: 4px 0 0 4px;
 }
 
 .search-bar button {
   padding: 8px 12px;
-  background-color: #f3c319 ;
+  background-color: #f3c319;
   color: #f8f7f5;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -42,10 +55,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.search-bar button:hover {
-  background-color: #edb80c ;
-}
-
+/* Auth buttons styling */
 .auth-buttons {
   position: absolute;
   top: 10px;
@@ -64,18 +74,19 @@ body {
 }
 
 .auth-buttons button:hover {
-  background-color:  #f3c319;
-  color: #f3c319;
+  background-color: #e7e0c565;
+  color: #fff;
 }
 
+/* Navigation links styling */
 .nav-links {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center; /* Center the navigation links */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  align-items: center; /* Add this line */
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-links li {
@@ -84,14 +95,14 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
 
 .nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white for hover effect */
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Dropdown styles */
@@ -144,6 +155,60 @@ body {
 .dropdown:hover .dropbtn {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Media query for small screens (phones) */
+@media (max-width: 768px) {
+  /* Stack the search bar and menu button vertically */
+  .main-nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Center the search bar and menu button, and give them more space */
+  .menu-button {
+    position: static;
+    margin-bottom: 10px;
+    order: 1; /* Make it appear first */
+  }
+
+  .search-bar {
+    order: 2; /* Make it appear below the menu button */
+    max-width: 100%;
+  }
+
+  .auth-buttons {
+    order: 3; /* Ensure auth buttons appear last */
+    top: auto;
+    right: auto;
+    position: static;
+    margin-top: 10px;
+  }
+
+  /* Ensure navigation links are stacked */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  /* Further adjustments for small screens */
+  .dropbtn {
+    font-size: 18px;
+  }
+
+  .auth-buttons button {
+    font-size: 14px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+}
+
 /* Signup page */
 /* From Uiverse.io by KapeParaguay */ 
 .form {
@@ -584,7 +649,7 @@ color: #f5f5f5;
       position: relative;
       width: 220px;
       height: 320px;
-      background: rgb(209, 72, 122);
+      background-color: rgb(192, 160, 114);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -608,7 +673,7 @@ color: #f5f5f5;
       justify-content: center;
       font-size: 25px;
       font-weight: bold;
-      background-color: rgb(230, 173, 203);
+      background-color: #83553e;
       transition: all 0.5s;
     }
     
@@ -630,6 +695,7 @@ color: #f5f5f5;
       height: 100%;
       border-radius: 15px;
       transition: all 0.5s;
+      color: #fff;
     }
     
     .card3:hover::after {
@@ -666,7 +732,28 @@ color: #f5f5f5;
   background-repeat: no-repeat;
 }
 
+.logo{
+  height: 100%;
+  width: 100%;
+}
 
+.btn-primary{
+  background-color: rgb(79, 151, 227);
+  color:#fff;
+}
+.event-section, .categories-section {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+/* footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #fff;
+} */
 
 /* .card3-img {
   width: 100%;
@@ -683,6 +770,7 @@ color: #f5f5f5;
     object-fit: cover;
   } */
   /* end of categories section */
+
 
 
 
