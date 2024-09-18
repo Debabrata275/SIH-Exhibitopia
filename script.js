@@ -107,13 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modified code for "Museums in Kolkata" text animation
     function animateMuseumTitle() {
-        museumTitle.style.opacity = '0';
-        museumTitle.style.transform = 'translateY(40px)';
-        setTimeout(() => {
-            museumTitle.style.transition = 'opacity 2s ease-out, transform 2s ease-out';
-            museumTitle.style.opacity = '1';
-            museumTitle.style.transform = 'translateY(0)';
-        }, 100);
+        const titles = document.querySelectorAll('.museum-section h2, .event-section h2, .category-section h2');
+        titles.forEach(title => {
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(40px)';
+            setTimeout(() => {
+                title.style.transition = 'opacity 2s ease-out, transform 2s ease-out';
+                title.style.opacity = '1';
+                title.style.transform = 'translateY(0)';
+            }, 100);
+        });
     }
 
     // Initial animation on page load
